@@ -14,10 +14,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MockTestTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>4A2CAA839F2722C796C6F1DFDC806B92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67BFC4463337BACC11BE8CCF7F2FD396</key>
 		<dict>
 			<key>primary</key>
 			<true/>

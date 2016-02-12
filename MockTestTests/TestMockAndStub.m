@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MockTest-Swift.h"
+#import <OCMock/OCMock.h>
 
 @interface TestMockAndStub : XCTestCase
 
@@ -25,15 +27,24 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    id mock = OCMClassMock([TweetManager  class]);
+    [OCMStub([mock fetchTweet:[OCMArg any]]) andReturn:@"How Are you? First Mock"];
+    
+    NSString *tweet = [mock fetchTweet:@"user"];
+    NSLog(@"Returned Value tu %@", tweet);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testNoArgMethodStub{
+    id mock = OCMClassMock([TweetManager class]);
+    OCMStub([mock fetchTweetNoArgs]).andReturn(@"Hell Stub");
+    NSString *returnValue = [mock fetchTweetNoArgs];
+    NSLog(@"Returned Value tu %@", returnValue);
 }
+
+- (void)testStaticMock{
+    
+    
+}
+
 
 @end

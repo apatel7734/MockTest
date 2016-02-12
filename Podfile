@@ -8,7 +8,7 @@ pod 'OCMock', '~> 3.2'
 end
 
 target 'MockTestTests' do
-
+pod 'OCMock', '~> 3.2'
 end
 
 target 'MockTestUITests' do
