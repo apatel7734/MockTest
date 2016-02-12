@@ -20,7 +20,20 @@ class TweetManager: NSObject {
     }
     
     static func fetchStaticTweet(laContext: LAContext) -> String{
-        let error: NSError?
-        return "Hello Static Tweet."
+        var error: NSError?
+        
+        if laContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error){
+            return "Can Evaluate."
+        }else{
+            return "Cannot Evaluate."
+        }
+    }
+    
+    static func fetchTweetWithErrorPointer(laContext: LAContext,var error: NSError?) -> String{
+        if laContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+            return "right"
+        }else{
+            return "wrong"
+        }
     }
 }

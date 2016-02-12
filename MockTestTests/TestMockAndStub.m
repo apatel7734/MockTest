@@ -10,6 +10,9 @@
 #import "MockTest-Swift.h"
 #import <OCMock/OCMock.h>
 
+@import LocalAuthentication;
+
+
 @interface TestMockAndStub : XCTestCase
 
 @end
@@ -41,9 +44,14 @@
     NSLog(@"Returned Value tu %@", returnValue);
 }
 
+
+
 - (void)testStaticMock{
-    
-    
+    id mock = OCMClassMock([LAContext class]);
+    OCMVerifyAll(mock);
+    OCMStub([mock canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:[OCMArg anyObjectRef]]).andReturn(NO);
+    NSString *stringReturned = [TweetManager fetchTweetWithErrorPointer:mock error:[[NSError alloc] init]];
+    NSLog(@"returned string = %@", stringReturned);
 }
 
 

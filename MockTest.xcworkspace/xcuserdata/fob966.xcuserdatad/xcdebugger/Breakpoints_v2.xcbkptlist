@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MockTestTests/TestMockAndStub.m"
-            timestampString = "476946425.356288"
+            timestampString = "476950351.802803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-testNoArgMethodStub"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MockTestTests/TestMockAndStub.m"
-            timestampString = "476946425.356288"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-testExample"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-testStaticMock"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
