@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		486D419E1C6D88CB00F1BAEB /* TestMockAndStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 486D419D1C6D88CB00F1BAEB /* TestMockAndStub.m */; };
 		48B162CF1C6D860F00CC6410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B162CE1C6D860F00CC6410 /* AppDelegate.swift */; };
 		48B162D11C6D860F00CC6410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B162D01C6D860F00CC6410 /* ViewController.swift */; };
 		48B162D41C6D860F00CC6410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B162D21C6D860F00CC6410 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		36967C15EF0F7D833F2CF99E /* Pods-MockTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockTest/Pods-MockTest.debug.xcconfig"; sourceTree = "<group>"; };
+		486D419C1C6D88CA00F1BAEB /* MockTestTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MockTestTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		486D419D1C6D88CB00F1BAEB /* TestMockAndStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMockAndStub.m; sourceTree = "<group>"; };
 		48B162CB1C6D860F00CC6410 /* MockTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B162CE1C6D860F00CC6410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B162D01C6D860F00CC6410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,8 +129,10 @@
 		48B162E21C6D860F00CC6410 /* MockTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				486D419D1C6D88CB00F1BAEB /* TestMockAndStub.m */,
 				48B162E31C6D860F00CC6410 /* MockTestTests.swift */,
 				48B162E51C6D860F00CC6410 /* Info.plist */,
+				486D419C1C6D88CA00F1BAEB /* MockTestTests-Bridging-Header.h */,
 			);
 			path = MockTestTests;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48B162E41C6D860F00CC6410 /* MockTestTests.swift in Sources */,
+				486D419E1C6D88CB00F1BAEB /* TestMockAndStub.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,10 +502,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MockTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.avgtechie.MockTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MockTestTests/MockTestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MockTest.app/MockTest";
 			};
 			name = Debug;
@@ -508,10 +517,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MockTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.avgtechie.MockTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MockTestTests/MockTestTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MockTest.app/MockTest";
 			};
 			name = Release;
